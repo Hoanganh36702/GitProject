@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./main.css"> -->
+    <style>
+        form{
+            width: 550px;
+            background-color: rgb(233, 233, 175);
+        }
+        h2{
+            background-color: blue;
+            color: rgb(0, 255, 42);
+            border-top: 10px;
+            margin: 10px 10px;
+        }
+        .blue{
+            color: rgb(90, 90, 224);
+        }
+        table td{
+            padding-bottom: 5px;
+        }
+        .container{
+            display: flex ;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <table>    
+                <h2>Đăng ký học viên</h2>
+                <tr>
+                    <td class="blue">Họ Và Tên</td>
+                    <td><input type="text" size="32px"></td>
+                </tr>
+                
+                <tr>
+                    <td  class="blue">Ngày sinh</td>
+                    <td><input type="text" size="20px"></td>
+                </tr>
+                <tr>
+                    <td  class="blue">Giới Tính</td>
+                    <td>
+                    <div class="giới-tính">
+                        <input type="radio" name="gioitinh" value="nam" checked> Nam
+                        <input type="radio" name="gioitinh" value="nữ"> Nữ
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ</td>
+                    <td><input type="text" style="line-height: 50px"></td>
+                </tr>
+                <tr>
+                    <td  class="blue">Lớp</td>
+                    <td>
+                        <label <label for="grade">Chọn lớp</label>
+                        <select id="grade" name="grade">
+                          <option value="html">HTML</option>
+                          <option value="css">CSS</option>
+                          <option value="js">JS</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td  class="blue">Email</td>
+                    <td><input type="text" size="20px"></td>
+                </tr>
+                    <td  class="blue">Điện thoại</td>
+                    <td><input type="text" size="20px"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button>Đăng ký</button>
+                        <button>Nhập lại</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
