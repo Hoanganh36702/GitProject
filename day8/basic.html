@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var tendangnhap = prompt("Vui lòng nhập tên đăng nhập:")
+    if(tendangnhap == "admin"){
+        var matkhau = prompt("Vui lòng nhập mật khẩu: ")
+        if(matkhau == "TheMaster"){
+            alert("Welcome!")
+        }else if(matkhau == ""){
+            alert("Canceled!")
+
+        }{
+            alert(" Wrong password")
+        }
+    }else if(tendangnhap == ""){
+        alert("Canceled!")
+    }else{
+        alert("I don’t know you")
+    }
+</script>
+</html>
