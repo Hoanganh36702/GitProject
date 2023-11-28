@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tictactoe</title>
+    <style>
+      .cell {
+        width: 75px;
+        height: 75px;
+        border: 2px solid;
+        box-shadow: 0 0 0 2px;
+        line-height: 75px;
+        font-size: 50px;
+        cursor: pointer;
+      }
+      #gameContainer {
+        font-family: "Permanent Marker", cursive;
+        text-align: center;
+      }
+      #cellContainer {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        width: 225px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gameContainer">
+      <h1>tik tac toe</h1>
+      <div id="cellContainer">
+        <div cellIndex="0" class="cell"></div>
+        <div cellIndex="1" class="cell"></div>
+        <div cellIndex="2" class="cell"></div>
+        <div cellIndex="3" class="cell"></div>
+        <div cellIndex="4" class="cell"></div>
+        <div cellIndex="5" class="cell"></div>
+        <div cellIndex="6" class="cell"></div>
+        <div cellIndex="7" class="cell"></div>
+        <div cellIndex="8" class="cell"></div>
+      </div>
+      <h2 id="statusText"></h2>
+      <button id="reStartButton">ReStart</button>
+    </div>
+  </body>
+  <script>
+    var isXturn = true;
+    var ReStart = document.querySelector("#reStartButton");
+    var cells = document.querySelectorAll(".cell");
+    var win = [
+      [0, 1, 2],
+      [3, 4, 5],
+      [6, 7, 8],
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8],
+      [0, 4, 8],
+      [2, 4, 6],
+    ];
+    var restartGame = function () {
+      cells.forEach(function (cell) {
+        cell.innerHTML = "";
+      });
+      isXturn = true;
+    };
+    document
+      .querySelector("#reStartButton")
+      .addEventListener("click", function () {
+        restartGame();
+      });
+    cells.forEach(function (cell) {
+      cell.addEventListener("click", function () {
+        if (isXturn) {
+          cell.innerHTML = "X";
+        } else {
+          cell.innerHTML = "O";
+        }
+        checkWin();
+        isXturn = !isXturn;
+      });
+    });
+    let round = false;
+    var checkWin = function () {
+      for (let i = 0; i < win.length; i++) {
+        const condition = win[i];
+        const cellA = cells[condition[0]].innerHTML;
+        const cellB = cells[condition[1]].innerHTML;
+        const cellC = cells[condition[2]].innerHTML;
+        if (cellA && cellA === cellB && cellB === cellC) {
+          alert(`${cellA} win`);
+          restartGame();
+          break;
+        }
+      }
+    };
+  </script>
+</html>
