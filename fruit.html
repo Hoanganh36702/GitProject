@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Giá hoa quả</h1>
+    <div id="form">
+      <label for="Hoa quả"></label>
+      <select name="Hoa quả" id="hoaqua">
+        <option value="1000">Ổi</option>
+        <option value="2000">Dưa Hấu</option>
+        <option value="3000">Táo</option>
+        <option value="4000">Xoài</option>
+        <option value="5000">Cam</option>
+        <option value="6000">Chôm Chôm</option>
+        <option value="7000">Măng Cụt</option>
+      </select>
+      <button>Xem Giá</button>
+      <div class="value"></div>
+    </div>
+  </body>
+  <script>
+    var form = document.getElementById("hoaqua");
+    var value = document.querySelector(".value");
+    var button = document.querySelector("button");
+    button.addEventListener("click", function () {
+      var selectedFruit = hoaqua.value;
+      value.innerHTML = selectedFruit;
+    });
+    console.log(form);
+  </script>
+</html>
