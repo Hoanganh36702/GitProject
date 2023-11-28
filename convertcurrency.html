@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+      body {
+        display: flex;
+      }
+      .container {
+        width: 500px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      form {
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .btn {
+        width: 100px;
+        margin-top: 20px;
+      }
+
+      .result {
+        margin-top: 20px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      #result-amount {
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Chuyển đổi tiền tệ</h1>
+      <form action="#" class="form">
+        <div class="form-group">
+          <label for="amount">Số tiền</label>
+          <input type="number" id="amount" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="from-currency">Từ tiền tệ</label>
+          <select id="from-currency" class="form-control">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
+            <option value="CNY">CNY</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="to-currency">Đến tiền tệ</label>
+          <select id="to-currency" class="form-control">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="JPY">JPY</option>
+            <option value="CNY">CNY</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Chuyển đổi</button>
+      </form>
+      <div class="result">
+        <p>Kết quả:</p>
+        <p id="result-amount"></p>
+      </div>
+    </div>
+  </body>
+</html>
