@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        display: flex;
+        align-items: center;
+      }
+      input {
+        height: 20px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tính điểm đại học khối D</h1>
+    <div class="content">
+      <p>Môn toán</p>
+      <input class="inputs" type="text" />
+    </div>
+    <div class="content">
+      <p>Môn văn</p>
+      <input class="inputs" type="text" />
+    </div>
+    <div class="content">
+      <p>Môn tiếng anh</p>
+      <input class="inputs" type="text" />
+    </div>
+    <div class="content">
+      <p>Khu vực</p>
+      <select class="select">
+        <option value="KV1">KV1</option>
+        <option value="KV2">KV2</option>
+        <option value="KV2-NT">KV2-NT</option>
+        <option value="KV3">KV3</option>
+      </select>
+    </div>
+    <button>Tính điểm</button>
+  </body>
+  <script>
+    var tong = 0;
+    var select = document.querySelector(".select");
+    var inputs = document.querySelectorAll(".inputs");
+    var button = document.querySelector("button");
+    button.addEventListener("click", function () {
+      var values = [];
+      inputs.forEach((input) => {
+        var a = parseInt(input.value);
+        values.push(a);
+        tong += a;
+      });
+      var kv = select.value;
+      if (kv == KV1) {
+        tong = tong + 1;
+      } else if (kv == KV2) {
+        tong = tong + 2;
+      } else if (kv == KV3) {
+        tong = tong + 3;
+      }
+      console.log("điểm khối D của bạn là: " + tong);
+    });
+  </script>
+</html>
