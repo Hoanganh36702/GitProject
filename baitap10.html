@@ -9,11 +9,11 @@
     <div id="demo"></div>
   </body>
   <script>
-    let i;
-    let text = "";
-    for (i = 0; i < 5; i++) {
-      text += "The number is: " + i + "</br>";
+    let num = prompt("Enter your number: ");
+    let total = 0;
+    for (let i = 0; i <= num; i++) {
+      total = total + i;
     }
-    document.getElementById("demo").innerHTML = text;
+    console.log(total);
   </script>
 </html>
