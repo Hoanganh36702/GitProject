@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Số đảo ngược</title>
+  </head>
+  <body>
+    <h1>Nhập vào một số</h1>
+    <input type="text" />
+    <div>
+      <button class="accept">OK</button>
+      <button class="cancel">Cancel</button>
+    </div>
+    <div class="insert"></div>
+  </body>
+  <script>
+    var accept = document.querySelector(".accept");
+    var input = document.querySelector("input");
+    var cancel = document.querySelector(".cancel");
+    var insert = document.querySelector(".insert");
+    let reverseNumber = 0;
+    accept.addEventListener("click", function () {
+      let number = parseInt(input.value);
+      while (number > 0) {
+        reverseNumber = reverseNumber * 10 + (number % 10);
+        number = Math.floor(number / 10);
+      }
+      insert.innerHTML = "So nguoc đảo la:" + reverseNumber;
+    });
+    cancel.addEventListener("click", function () {
+      insert.innerHTML = "";
+      input.value = "";
+    });
+  </script>
+</html>
