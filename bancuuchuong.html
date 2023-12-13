@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng cửu chương</title>
+  </head>
+  <body>
+    <div id="content"></div>
+  </body>
+  <script>
+    let i = 1;
+    let sout = `<table id="myTable" border="1"><thead><tr><th colspan="10">Bảng cửu chương</th></tr></thead><tbody>`;
+    do {
+      let j = 1;
+      sout += `<tr>`;
+      do {
+        sout += `<td>` + i + ` x ` + j + ` = ` + i * j + `</td>`;
+        j++;
+      } while (j <= 10);
+      sout += `</tr>`;
+      i++;
+    } while (i <= 9);
+    sout += `</tbody></table>`;
+    document.getElementById("content").innerHTML = sout;
+  </script>
+</html>
