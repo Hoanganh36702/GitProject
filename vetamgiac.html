@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vẽ tam giác</title>
+  </head>
+  <body>
+    <div class="content"></div>
+  </body>
+  <script>
+    let n = prompt("Nhập chiều cao của tam giác");
+    var content = document.querySelector(".content");
+    var rightcontent = document.querySelector(".rightcontent");
+    let sout = "";
+    let triangle = "";
+    function vetamgiac(a) {
+      for (let i = 1; i <= a; i++) {
+        for (let j = 1; j <= i; j++) {
+          sout += "*";
+        }
+        sout += `<br>`;
+        triangle += sout;
+        sout = "";
+      }
+      sout += `<br>
+      `;
+      triangle += sout;
+      //
+      for (let i = a; i >= 0; i--) {
+        for (let j = 1; j <= i; j++) {
+          sout += "*";
+        }
+        sout += `<br>`;
+        triangle += sout;
+        sout = "";
+      }
+    }
+    vetamgiac(n);
+  </script>
+</html>
