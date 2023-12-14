@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+  </body>
+  <script>
+    let a = parseInt(prompt("Nhập số nguyên a: "));
+    let b = parseInt(prompt("Nhập số nguyên b: "));
+    let sum = 0;
+    if (isNaN(a) || isNaN(b)) {
+      a = prompt("Vui long nhập số nguyên a hợp lệ: ");
+      b = prompt("Vui long nhập số nguyên b hợp lệ: ");
+    }
+    if (a > b) {
+      alert("Vui lòng nhập lại a phải nhỏ hơn b");
+      a = prompt("Nhập lại số nguyên a: ");
+      b = prompt("Nhập lại số nguyên b: ");
+    }
+    for (let i = a; i <= b; i++) {
+      sum += i;
+    }
+    console.log(sum);
+  </script>
+</html>
