@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hien thi 20 so nguyen to</title>
+  </head>
+  <body>
+    <div></div>
+  </body>
+  <script>
+    let count = 0;
+    let arr = [];
+    let a = 1;
+    let check;
+    do {
+      a = a + 1;
+      check = true;
+      songuyento(a);
+    } while (count < 20);
+
+    function songuyento(a) {
+      for (let i = 2; i <= Math.sqrt(a); i++) {
+        if (a % i === 0) {
+          check = false;
+          break;
+        }
+      }
+      if (check === true) {
+        arr.push(a);
+        count++;
+      }
+      if (count === 20) {
+        document.write("Các số nguyên tố đầu tiên là:" + arr);
+      }
+    }
+  </script>
+</html>
