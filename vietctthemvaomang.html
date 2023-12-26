@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JS Bin</title>
+    <style>
+      body {
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input type="text" id="txtValue" />
+    <input
+      type="button"
+      id="btnAdd"
+      value="Add"
+      onclick="add_element_to_array();"
+    />
+    <input
+      type="button"
+      id="btnDisplay"
+      value="Display"
+      onclick="display_array();"
+    />
+    <div id="result"></div>
+  </body>
+  <script>
+    var input = document.querySelector("#txtValue");
+    var result = document.querySelector("#result");
+    let array = [];
+    let i = 0;
+    console.log(input);
+    function add_element_to_array() {
+      let element = input.value;
+      array.push(element);
+      console.log(array);
+      i++;
+      let newContent = "Element " + i + " is = " + " " + input.value;
+      let existingContent = result.innerHTML.trim();
+      let separator = existingContent ? "<br>" : "";
+      result.innerHTML = existingContent + separator + newContent;
+    }
+    function display_array() {
+      let existingContent = result.innerHTML.trim();
+      let separator = existingContent ? "<br>" : "";
+      result.innerHTML =
+        existingContent + separator + "Mảng là: Array = " + "{" + array + "}";
+    }
+  </script>
+</html>
